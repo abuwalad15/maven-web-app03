@@ -4,13 +4,7 @@ pipeline {
         maven 'maven-3.9.9'
     	}
 	stages{
-		stage('Checkout Code'){
-			steps{
-				checkout scm
-				}
-			}
-
-	stage('Build'){
+		stage('Build'){
 		steps{
 		bat "mvn clean package"
 		}
